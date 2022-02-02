@@ -1,0 +1,10 @@
+.home{
+    width: 100%;
+    padding: 50px 20%;
+}
+
+.home .box{
+    background: #fff;
+    padding: 15px;
+    width: 400px;
+}
