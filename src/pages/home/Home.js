@@ -1,5 +1,5 @@
 import useFetch from '../../hooks/useFetch'
-import RecipesList from '../../components/recipesList/RecipesList';
+import RecipeList from '../../components/recipesList/RecipesList';
 import './Home.css'
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
         <div className="home">
             { error && <div>{ error }</div> }
             { isPending && <div>Loading...</div> }
-            { recipes && <RecipesList recipes={recipes} /> }
+            { recipes && <RecipeList recipes={recipes} /> }
         </div>
     )
 }

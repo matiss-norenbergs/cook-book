@@ -1,4 +1,5 @@
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return(
@@ -10,7 +11,7 @@ const NavBar = () => {
                     <label htmlFor="">Search: </label>
                     <input type="text" />
                 </form>
-                    <button>create recipe</button>
+                    <Link className='createBtn' to='/create'>create recipe</Link>
             </div>
         </nav>
     )

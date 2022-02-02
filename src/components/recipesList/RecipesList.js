@@ -1,4 +1,7 @@
-const RecipesList = (props) => {
+import './RecipesList.css';
+import { Link } from 'react-router-dom';
+
+const RecipeList = (props) => {
     const recipes = props.recipes;
 
     return (
@@ -6,12 +9,13 @@ const RecipesList = (props) => {
             {recipes.map((recipe) => (
                 <div className="recipe" key={recipe.id}>
                     <h2>{ recipe.title }</h2>
-                    <span>{ recipe.cookingTime }</span>
+                    <span>{ recipe.cookingTime } to make.</span>
                     <p>{ recipe.method }</p>
+                    <Link className='recipeBtn' to='/recipe/recipe.id'>Cook this</Link>
                 </div>
             ))}
         </div>
     );
 }
  
-export default RecipesList;
+export default RecipeList;

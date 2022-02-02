@@ -1,6 +1,7 @@
 .home{
     width: 100%;
-    padding: 50px 20%;
+    padding: var(--padding);
+    padding-top: 60px;
 }
 
 .home .box{

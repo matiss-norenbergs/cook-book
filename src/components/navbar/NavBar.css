@@ -4,7 +4,7 @@ nav{
     color: var(--textWhite);
     height: 90px;
     width: 100%;
-    padding: 0 20%;
+    padding: var(--padding);
     align-items: center;
     justify-content: space-between;
 }
@@ -34,17 +34,19 @@ nav div form input{
     border-radius: 5px;
 }
 
-nav div button{
+nav div .createBtn{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     border: 1px solid #fff;
     border-radius: 5px;
-    background: transparent;
     margin-left: 30px;
     font-size: 1.3rem;
     color: #fff;
     padding: 0 10px;
 }
 
-nav div button:hover{
+nav div .createBtn:hover{
     background: #fff;
     color: var(--purple);
 }
