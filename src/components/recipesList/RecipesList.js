@@ -11,7 +11,9 @@ const RecipeList = (props) => {
                     <h2>{ recipe.title }</h2>
                     <span>{ recipe.cookingTime } to make.</span>
                     <p>{ recipe.method }</p>
-                    <Link className='recipeBtn' to='/recipe/recipe.id'>Cook this</Link>
+                    <div>
+                        <Link className='recipeBtn' to='/recipe/recipe.id'>Cook this</Link>
+                    </div>
                 </div>
             ))}
         </div>

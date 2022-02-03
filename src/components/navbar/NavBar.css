@@ -9,8 +9,11 @@ nav{
     justify-content: space-between;
 }
 
-nav h1{
+nav .logo{
+    text-decoration: none;
+    color: var(--textWhite);
     font-size: 2.2rem;
+    font-weight: 700;
 }
 
 nav div{

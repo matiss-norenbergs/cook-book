@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
     return(
         <nav>
-            <h1>Cook Book</h1>
+            <Link className='logo' to='/'>Cook Book</Link>
 
             <div className='section'>
                 <form>

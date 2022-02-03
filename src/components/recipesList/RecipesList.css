@@ -1,14 +1,12 @@
 .recipe-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 31% 31% 31%;
 }
 
 .recipe-list .recipe{
     background: #fff;
-    width: 340px;
     padding: 15px;
-    margin-bottom: 40px;
     animation: rotateBack .5s;
 }
 
@@ -45,14 +43,19 @@
     overflow: hidden;
 }
 
-.recipe-list .recipe .recipeBtn{
-    display: inline-block;
+.recipe-list .recipe div{
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-list .recipe div .recipeBtn{
     text-decoration: none;
     background: var(--background);
     color: #666;
     border: none;
+    border-radius: 5px;
     font-size: 1.4rem;
-    padding: 5px 20px;
+    padding: 6px 20px;
 }
 
 .recipe-list .recipe .recipeBtn:hover{
