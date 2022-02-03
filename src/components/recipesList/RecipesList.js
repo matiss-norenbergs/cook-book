@@ -12,7 +12,7 @@ const RecipeList = (props) => {
                     <span>{ recipe.cookingTime } to make.</span>
                     <p>{ recipe.method }</p>
                     <div>
-                        <Link className='recipeBtn' to='/recipe/recipe.id'>Cook this</Link>
+                        <Link className='recipeBtn' to={'/recipe/' + recipe.id}>Cook this</Link>
                     </div>
                 </div>
             ))}

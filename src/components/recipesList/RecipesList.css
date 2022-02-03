@@ -16,16 +16,16 @@
 
 @keyframes rotate{
     0% {transform: rotate(0deg);}
-    100% {transform: rotate(-5deg);}
+    100% {transform: rotate(5deg);}
 }
 
 @keyframes rotateBack{
-    0% {transform: rotate(-5deg);}
+    0% {transform: rotate(5deg);}
     100% {transform: rotate(0deg);}
 }
 
 .recipe-list .recipe h2{
-    color: #555;
+    color: var(--textDark);
     margin-bottom: 5px;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .recipe-list .recipe p{
-    color: #666;
+    color: var(--textDark);;
     height: 60px;
     margin-top: 15px;
     font-size: 1.1rem;
@@ -51,7 +51,7 @@
 .recipe-list .recipe div .recipeBtn{
     text-decoration: none;
     background: var(--background);
-    color: #666;
+    color: var(--textDark);
     border: none;
     border-radius: 5px;
     font-size: 1.4rem;

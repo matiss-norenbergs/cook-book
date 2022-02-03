@@ -10,8 +10,9 @@
 :root{
   --purple: #58249c;
   --textWhite: #fff;
+  --textDark: #555;
   --background: #dfdfdf;
-  --padding: 0 18%;
+  --padding: 60px 18%;
 }
 
 body{
