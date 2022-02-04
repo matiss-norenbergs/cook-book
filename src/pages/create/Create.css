@@ -1,0 +1,105 @@
+.create{
+    padding: var(--padding);
+}
+
+.create h1{
+    font-size: 2.2rem;
+    color: #555;
+    text-align: center;
+}
+
+.create .newRecipe{
+    padding: 3rem 0;
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.create .newRecipe .row{
+    margin-bottom: 1.6rem;
+}
+
+.create .newRecipe .row .inline{
+    display: flex;
+}
+
+.create .newRecipe .row label{
+    display: block;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: .8rem;
+    color: var(--textDark);
+}
+
+.create .newRecipe .row input[type=text], input[type=number], textarea{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 1.6rem;
+    padding: 15px;
+    color: var(--textDark);
+}
+
+.create .newRecipe .row span{
+    display: block;
+    text-align: left;
+    margin-top: .6rem;
+    margin-bottom: 1.9rem;
+    font-size: 1.3rem;
+    color: #888;
+}
+
+.create .newRecipe .row span strong{
+    display: inline-flex;
+    border: 2px solid #888;
+    border-radius: 6px;
+    padding: 4px 6px;
+    margin-right: 6px;
+    margin-bottom: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.create .newRecipe .row span strong button{
+    display: inline-block;
+    background: transparent;
+    border: 2px solid var(--purple);
+    color: var(--purple);
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0;
+    line-height: 1.8rem;
+    width: 1.9rem;
+    margin: 0;
+    margin-left: .5rem;
+}
+
+.create .newRecipe .row span strong button:hover{
+    background: var(--purple);
+    color: var(--textWhite);
+}
+
+.create .newRecipe .row textarea{
+    height: 80px;
+    resize: vertical;
+    overflow-y: auto;
+}
+
+.create .newRecipe input[type=submit], button{
+    height: 50px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background: var(--purple);
+    color: var(--textWhite);
+    align-items: center;
+    padding: 5px 25px;
+    margin-left: 10px;
+}
+
+.create .newRecipe input[type=submit]:hover, button:hover{
+    background: #555;
+}

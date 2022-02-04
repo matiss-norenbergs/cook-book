@@ -1,0 +1,70 @@
+.recipe-list{
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 31% 31% 31%;
+}
+
+.recipe-list a{
+    text-decoration: none;
+}
+
+.recipe-list .recipe{
+    background: #fff;
+    padding: 15px;
+    animation: rotateBack .5s;
+}
+
+.recipe-list .recipe:hover{
+    animation: rotate 1s both;
+}
+
+@keyframes rotate{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(5deg);}
+}
+
+@keyframes rotateBack{
+    0% {transform: rotate(5deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.recipe-list .recipe h2{
+    color: var(--textDark);
+    margin-bottom: 5px;
+}
+
+.recipe-list .recipe span{
+    color: #888;
+}
+
+.recipe-list .recipe p{
+    color: var(--textDark);
+    margin-top: 15px;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.recipe-list .recipe div{
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-list .recipe div .recipeBtn{
+    text-decoration: none;
+    background: var(--background);
+    color: var(--textDark);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    padding: 6px 20px;
+    cursor: pointer;
+}
+
+.recipe-list .recipe:hover .recipeBtn{
+    background-color: #ccc;
+}

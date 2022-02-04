@@ -1,0 +1,55 @@
+nav{
+    display: flex;
+    background: var(--purple);
+    color: var(--textWhite);
+    height: 90px;
+    width: 100%;
+    padding: var(--padding);
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    text-decoration: none;
+    color: var(--textWhite);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+nav div{
+    display: flex;
+}
+
+nav div form{
+    display: flex;
+    align-items: center;
+}
+
+nav div form label{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+nav div form input{
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+nav div .createBtn{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-left: 30px;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 0 10px;
+}
+
+nav div .createBtn:hover{
+    background: #fff;
+    color: var(--purple);
+}
