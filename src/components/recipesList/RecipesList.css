@@ -38,13 +38,15 @@
 }
 
 .recipe-list .recipe p{
-    color: var(--textDark);;
-    height: 60px;
+    color: var(--textDark);
     margin-top: 15px;
+    margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .recipe-list .recipe div{
