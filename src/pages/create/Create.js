@@ -7,7 +7,7 @@ const Create = () => {
     const [ingredient, setIngredient] = useState('');
     const [ingredients, setIngredients] = useState([]);
     const [method, setMethod] = useState('');
-    const [cookingTime, setCookingTime] = useState('');
+    const [cookingTime, setCookingTime] = useState([]);
     const navigate = useNavigate();
     let keyId = 0;
 
@@ -76,7 +76,7 @@ const Create = () => {
                 </div>
                 <div className="row">
                     <label>Cooking time (in minutes):</label>
-                    <input type="number" required value={cookingTime} onChange={(e) => setCookingTime(e.target.value)} />
+                    <input type="text" required value={cookingTime} onChange={(e) => setCookingTime(e.target.value)} />
                 </div>
                 <input type="submit" value="submit" />
             </form>
