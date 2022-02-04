@@ -68,6 +68,28 @@
       "method": "1. Put the pack of rolton in the bowl along with the packet of tastes. 2. Apply hot water. 3. Wait about 10 minutes and it's ready to eat.",
       "cookingTime": "8 minutes",
       "id": "-meA1mx"
+    },
+    {
+      "title": "Cereal",
+      "ingredients": [
+        "cereal",
+        "milk"
+      ],
+      "method": "1. Put cereal in a bowl. 2. Pour milk over the cereal. 3. Ready to eat!",
+      "cookingTime": "2 minutes",
+      "id": "-UtyhZY"
+    },
+    {
+      "title": "Mac n Cheese",
+      "ingredients": [
+        "Macaroni",
+        "Cheese",
+        "Water",
+        "Salt"
+      ],
+      "method": "Bok cooking sdifu sdifsidfisdufisdfi sudfsd fuisdfi sdfus dfusd fusdfi usdfs dfiousdjf iousjdfius dfisudf isudfisdufsdifsdf s",
+      "cookingTime": "20",
+      "id": "0YLosRS"
     }
   ]
 }

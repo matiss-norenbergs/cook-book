@@ -4,6 +4,10 @@
     grid-template-columns: 31% 31% 31%;
 }
 
+.recipe-list a{
+    text-decoration: none;
+}
+
 .recipe-list .recipe{
     background: #fff;
     padding: 15px;
@@ -56,8 +60,9 @@
     border-radius: 5px;
     font-size: 1.4rem;
     padding: 6px 20px;
+    cursor: pointer;
 }
 
-.recipe-list .recipe .recipeBtn:hover{
+.recipe-list .recipe:hover .recipeBtn{
     background-color: #ccc;
 }

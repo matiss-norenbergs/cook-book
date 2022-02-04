@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Create.css'
 
 const Create = () => {
@@ -7,18 +8,28 @@ const Create = () => {
     const [ingredients, setIngredients] = useState([]);
     const [method, setMethod] = useState('');
     const [cookingTime, setCookingTime] = useState('');
+    const navigate = useNavigate();
+    let keyId = 0;
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const recipe = { title, ingredients, method, cookingTime };
+        if(title !== '' && ingredients.length !== 0 && method !== '' && cookingTime !== ''){
+            const recipe = { title, ingredients, method, cookingTime };
 
-        fetch('http://localhost:3000/recipes', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(recipe)
-        }).then(() => {
-            console.log("New recipe added!");
-        })
+            fetch('http://localhost:3000/recipes', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(recipe)
+            }).then(() => {
+                console.log("New recipe added!");
+            })
+
+            setTimeout(function() {
+                navigate("/");
+            }, 100);
+        }else{
+            console.log("You've missed a field!");
+        }
     }
 
     const handleAdd = (e) => {
@@ -52,7 +63,7 @@ const Create = () => {
                     <span>
                         Current ingredients:&nbsp;
                         {ingredients.map(e =>
-                            <strong key={e}> 
+                            <strong key={keyId++}> 
                                 {e}
                                 <button name={e} onClick={removeIngredient}>×</button> 
                             </strong>
@@ -65,7 +76,7 @@ const Create = () => {
                 </div>
                 <div className="row">
                     <label>Cooking time (in minutes):</label>
-                    <input type="text" required value={cookingTime} onChange={(e) => setCookingTime(e.target.value)} />
+                    <input type="number" required value={cookingTime} onChange={(e) => setCookingTime(e.target.value)} />
                 </div>
                 <input type="submit" value="submit" />
             </form>

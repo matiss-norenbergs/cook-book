@@ -7,14 +7,16 @@ const RecipeList = (props) => {
     return (
         <div className="recipe-list">
             {recipes.map((recipe) => (
-                <div className="recipe" key={recipe.id}>
-                    <h2>{ recipe.title }</h2>
-                    <span>{ recipe.cookingTime } to make.</span>
-                    <p>{ recipe.method }</p>
-                    <div>
-                        <Link className='recipeBtn' to={'/recipe/' + recipe.id}>Cook this</Link>
+                <Link to={'/recipe/' + recipe.id}  key={recipe.id}>
+                    <div className="recipe">
+                        <h2>{ recipe.title }</h2>
+                        <span>{ recipe.cookingTime } to make.</span>
+                        <p>{ recipe.method }</p>
+                        <div>
+                            <button className='recipeBtn'>Cook this</button>
+                        </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );
