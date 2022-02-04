@@ -35,6 +35,8 @@ nav div form input{
     width: 300px;
     border: none;
     border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5rem;
 }
 
 nav div .createBtn{
