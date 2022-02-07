@@ -23,7 +23,7 @@ const useFetch = (url) => {
                 setIsPedning(false);
                 setError(err.massage);
             })
-        }, 200);
+        }, 100);
     }, [url]);
 
     return { data, isPending, error }

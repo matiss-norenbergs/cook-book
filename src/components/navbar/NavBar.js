@@ -7,11 +7,16 @@ const NavBar = () => {
     const initialRender = useRef(true);
     const navigate = useNavigate();
 
+    const submit = (e) => {
+        e.preventDefault();
+        navigate(`/search?q=${searchVal}`);
+    }
+
     useEffect(() => {
         if(initialRender.current){
             initialRender.current = false;
         }else{
-            navigate("/search", {state: searchVal});
+            navigate(`/search?q=${searchVal}`);
         }
     }, [searchVal]);
 
@@ -20,7 +25,7 @@ const NavBar = () => {
             <Link className='logo' to='/'>Cook Book</Link>
 
             <div className='section'>
-                <form>
+                <form onSubmit={submit}>
                     <label>Search: </label>
                     <input type="text" value={searchVal} onChange={(e) => setSearchVal(e.target.value)} />
                 </form>
