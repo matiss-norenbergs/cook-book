@@ -16,7 +16,11 @@ const NavBar = () => {
         if(initialRender.current){
             initialRender.current = false;
         }else{
-            navigate(`/search?q=${searchVal}`);
+            if(searchVal !== ''){
+                navigate(`/search?q=${searchVal}`);
+            }else{
+                navigate("/");
+            }
         }
     }, [searchVal]);
 
