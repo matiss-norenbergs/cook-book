@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 
 const NavBar = () => {
-    const [search, setSearch] = useState('');
+    const [searchVal, setSearchVal] = useState('');
     const initialRender = useRef(true);
     const navigate = useNavigate();
 
@@ -11,10 +11,9 @@ const NavBar = () => {
         if(initialRender.current){
             initialRender.current = false;
         }else{
-            navigate("/search");
-            console.log("Searching...");
+            navigate("/search", {state: searchVal});
         }
-    }, [search]);
+    }, [searchVal]);
 
     return(
         <nav>
@@ -23,7 +22,7 @@ const NavBar = () => {
             <div className='section'>
                 <form>
                     <label>Search: </label>
-                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
+                    <input type="text" value={searchVal} onChange={(e) => setSearchVal(e.target.value)} />
                 </form>
                     <Link className='createBtn' to='/create'>create recipe</Link>
             </div>

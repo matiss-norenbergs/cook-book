@@ -59,14 +59,18 @@
       "id": "FdqZKBL"
     },
     {
-      "title": "Cheese",
+      "title": "Rosols",
       "ingredients": [
-        "milk",
-        "salt"
+        "zirņi",
+        "kartupeļi",
+        "gaļa",
+        "olas",
+        "gurķi",
+        "majonēze"
       ],
-      "method": "Boil it and mix it",
-      "cookingTime": "2 minutes",
-      "id": "Wl5xJeK"
+      "method": "1. Visu sagriež. 2. Visu ievieto bļodā. 3. Pievieno majonēzi. 4. Samaisa visu vienmērīgā masā. 5. Novieto malā, lai viss nosēžas. 6. Gatavs ēšanai.",
+      "cookingTime": "30 minutes",
+      "id": "0v033vO"
     }
   ]
 }
