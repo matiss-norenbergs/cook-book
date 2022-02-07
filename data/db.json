@@ -71,6 +71,26 @@
       "method": "1. Visu sagriež. 2. Visu ievieto bļodā. 3. Pievieno majonēzi. 4. Samaisa visu vienmērīgā masā. 5. Novieto malā, lai viss nosēžas. 6. Gatavs ēšanai.",
       "cookingTime": "30 minutes",
       "id": "0v033vO"
+    },
+    {
+      "title": "Sviestmaize",
+      "ingredients": [
+        "baltmaize",
+        "sviests",
+        "piena desa"
+      ],
+      "method": "1. Sasmērē maizi ar sviestu, 2. Nogriež 2 gabaliņus no desas. 3. Uzliek desu uz maizes. 4. Gatavs ēšanai.",
+      "cookingTime": "2 minutes",
+      "id": "5TmWBYX"
+    },
+    {
+      "title": "test",
+      "ingredients": [
+        "test"
+      ],
+      "method": "test\n",
+      "cookingTime": "2 minutes",
+      "id": "Dpj97GW"
     }
   ]
 }
