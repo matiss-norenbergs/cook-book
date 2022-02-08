@@ -26,7 +26,7 @@ const Create = () => {
 
             setTimeout(function() {
                 navigate("/");
-            }, 100);
+            }, 200);
         }else{
             console.log("You've missed a field!");
         }
