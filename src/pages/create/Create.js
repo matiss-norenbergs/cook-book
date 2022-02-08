@@ -7,13 +7,14 @@ const Create = () => {
     const [ingredient, setIngredient] = useState('');
     const [ingredients, setIngredients] = useState([]);
     const [method, setMethod] = useState('');
-    const [cookingTime, setCookingTime] = useState([]);
+    const [time, setTime] = useState('');
     const navigate = useNavigate();
     let keyId = 0;
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(title !== '' && ingredients.length !== 0 && method !== '' && cookingTime !== ''){
+        if(title !== '' && ingredients.length !== 0 && method !== '' && time !== '' && !isNaN(time)){
+            let cookingTime = time + " minutes"
             const recipe = { title, ingredients, method, cookingTime };
 
             fetch('http://localhost:3000/recipes', {
@@ -21,14 +22,14 @@ const Create = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(recipe)
             }).then(() => {
-                console.log("New recipe added!");
+                // console.log("New recipe added!");
             })
 
             setTimeout(function() {
                 navigate("/");
             }, 200);
         }else{
-            console.log("You've missed a field!");
+            // console.log("You've missed a field!");
         }
     }
 
@@ -76,7 +77,7 @@ const Create = () => {
                 </div>
                 <div className="row">
                     <label>Cooking time (in minutes):</label>
-                    <input type="text" required value={cookingTime} onChange={(e) => setCookingTime(e.target.value)} />
+                    <input type="number" required value={time} onChange={(e) => setTime(e.target.value)} />
                 </div>
                 <input type="submit" value="submit" />
             </form>
