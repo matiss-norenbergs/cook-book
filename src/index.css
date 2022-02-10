@@ -9,8 +9,9 @@
 
 :root{
   --purple: #58249c;
+  --title: #555;
   --textWhite: #fff;
-  --textDark: #555;
+  --textDark: #666;
   --background: #dfdfdf;
   --padding: 60px 18%;
 }

@@ -39,6 +39,11 @@ nav div form input{
     font-size: 1.5rem;
 }
 
+nav div form input:focus{
+    outline: none;
+    background: #bbb;
+}
+
 nav div .createBtn{
     display: flex;
     align-items: center;

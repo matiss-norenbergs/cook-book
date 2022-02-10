@@ -57,6 +57,63 @@
       "method": "visu samet katlā un vāra",
       "cookingTime": "7 minutes",
       "id": "FdqZKBL"
+    },
+    {
+      "title": "Spaghetti Sauce",
+      "ingredients": [
+        "1 pound ground beef",
+        "1 onion, chopped",
+        "4 cloves garlic, minced",
+        "1 small green bell pepper, diced",
+        "1 (28 ounce) can diced tomatoes",
+        "1 (16 ounce) can tomato sauce",
+        "1 (6 ounce) can tomato paste",
+        "2 teaspoons dried oregano",
+        "2 teaspoons dried basil",
+        "1 teaspoon salt",
+        "½ teaspoon black pepper"
+      ],
+      "method": "1. Combine ground beef, onion, garlic, and green pepper in a large saucepan. Cook and stir until meat is brown and vegetables are tender. Drain grease. 2. Stir diced tomatoes, tomato sauce, and tomato paste into the pan. Season with oregano, basil, salt, and pepper. Simmer spaghetti sauce for 1 hour, stirring occasionally.",
+      "cookingTime": "85 minutes",
+      "id": "Wnx4_Zn"
+    },
+    {
+      "title": "Sugar Cookies",
+      "ingredients": [
+        "2 ¾ cups all-purpose flour",
+        "1 teaspoon baking soda",
+        "½ teaspoon baking powder",
+        "1 cup butter, softened",
+        "1 ½ cups white sugar",
+        "1 egg",
+        "1 teaspoon vanilla extract"
+      ],
+      "method": "1. Preheat oven to 375 degrees F (190 degrees C). In a small bowl, stir together flour, baking soda, and baking powder. Set aside. 2. In a large bowl, cream together the butter and sugar until smooth. Beat in egg and vanilla. Gradually blend in the dry ingredients. Roll rounded teaspoonfuls of dough into balls, and place onto ungreased cookie sheets. 3. Bake 8 to 10 minutes in the preheated oven, or until golden. Let stand on cookie sheet two minutes before removing to cool on wire racks.",
+      "cookingTime": "90 minutes",
+      "id": "onbcAzC"
+    },
+    {
+      "title": "Rice Salad",
+      "ingredients": [
+        "2 cups water",
+        "1 cup white rice",
+        "6 eggs",
+        "1 (10 ounce) package frozen peas, thawed",
+        "1 cup chopped celery",
+        "¼ cup chopped onion",
+        "1 (4 ounce) jar diced pimento",
+        "1 cup mayonnaise",
+        "1 teaspoon prepared mustard",
+        "1 tablespoon lemon juice",
+        "¼ cup sweet pickle relish",
+        "1 (9 ounce) can solid white tuna packed in water, drained",
+        "¼ teaspoon dried dill weed",
+        "1 teaspoon salt",
+        "⅛ teaspoon pepper"
+      ],
+      "method": "1. In a saucepan bring water to a boil. Add rice and stir. Reduce heat, cover and simmer for 20 minutes. Remove from heat, and set aside to cool. 2. Place eggs in a saucepan and cover with cold water. Bring to a boil and immediately remove from heat. Cover and let eggs stand in hot water for 10 to 12 minutes. Remove from hot water, cool, peel and chop. 3. Rinse frozen peas under cold water. Strain, and place in a large mixing bowl. Add eggs, rice, celery, onions, and pimiento; toss to combine, and set aside. In a separate bowl, stir the mayonnaise together with mustard, lemon juice, relish, tuna, dill, salt, and pepper until well blended. Add to the vegetable mixture, and toss to combine. Cover, and refrigerate for a minimum of 4 hours. Toss once more before serving. Serve chilled.",
+      "cookingTime": "290 minutes",
+      "id": "tOmyiJH"
     }
   ]
 }
