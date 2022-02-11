@@ -3,7 +3,7 @@
 }
 
 .recipe .recipeInfo{
-    background: #fff;
+    background: var(--background2);
     padding: 40px;
     font-weight: 500;
 }
@@ -20,18 +20,18 @@
     text-align: center;
     font-size: 1.4rem;
     line-height: 1.6rem;
-    color: var(--textDark);
+    color: var(--dark);
 }
 
 .recipe .recipeInfo .cookTime span{
     display: block;
     text-align: center;
-    color: #888;
+    color: var(--grey);
 }
 
 .recipe .recipeInfo .cookMethod{
     margin-top: 1.5rem;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    color: var(--textDark);
+    color: var(--dark);
 }

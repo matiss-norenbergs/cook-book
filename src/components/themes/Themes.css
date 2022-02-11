@@ -1,0 +1,21 @@
+.themes{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    padding-bottom: 0;
+    padding-top: 1rem;
+}
+
+.themes .themes-btn{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    padding: 0;
+    margin: 5px;
+    border: 2px solid #000;
+}
+
+.themes .themes-btn:hover{
+    border: 2px solid red;
+}

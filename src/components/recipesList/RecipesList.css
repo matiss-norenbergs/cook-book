@@ -9,7 +9,7 @@
 }
 
 .recipe-list .recipe{
-    background: #fff;
+    background: var(--background2);
     padding: 20px;
     animation: rotateBack .5s;
 }
@@ -35,12 +35,12 @@
 }
 
 .recipe-list .recipe span{
-    color: #888;
+    color: var(--grey);
     font-size: 1.3rem;
 }
 
 .recipe-list .recipe p{
-    color: var(--textDark);
+    color: var(--dark);
     margin-top: 17px;
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
@@ -60,7 +60,7 @@
     display: flex;
     text-decoration: none;
     background: var(--background);
-    color: var(--textDark);
+    color: var(--dark);
     border: none;
     border-radius: 5px;
     font-size: 1.4rem;

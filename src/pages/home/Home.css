@@ -4,7 +4,7 @@
 }
 
 .home .box{
-    background: #fff;
+    background: var(--white);
     padding: 15px;
     width: 400px;
 }
