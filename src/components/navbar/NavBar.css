@@ -16,35 +16,11 @@ nav .logo{
     font-weight: 700;
 }
 
-nav div{
+nav .section{
     display: flex;
 }
 
-nav div form{
-    display: flex;
-    align-items: center;
-}
-
-nav div form label{
-    font-size: 1.5rem;
-    margin-right: 10px;
-}
-
-nav div form input{
-    height: 40px;
-    width: 300px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1.5rem;
-}
-
-nav div form input:focus{
-    outline: none;
-    background: #bbb;
-}
-
-nav div .createBtn{
+nav .section .createBtn{
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -56,7 +32,7 @@ nav div .createBtn{
     padding: 0 10px;
 }
 
-nav div .createBtn:hover{
+nav .section .createBtn:hover{
     background: #fff;
     color: var(--purple);
 }
