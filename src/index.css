@@ -18,6 +18,24 @@
   --padding: 60px 18%;
 }
 
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: #777;
+  border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+  background: #999;
+  border-radius: 6px;
+}
+
 body{
   background: var(--background);
 }

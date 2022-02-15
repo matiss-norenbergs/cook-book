@@ -1,0 +1,22 @@
+.notFound{
+    padding: var(--padding);
+    color: var(--title);
+}
+
+.notFound h2{
+    font-size: 1.8rem;
+}
+
+.notFound p{
+    font-size: 1.3rem;
+}
+
+.notFound a{
+    font-size: 1.5rem;
+    color: var(--title);
+    text-decoration: none;
+}
+
+.notFound a:hover{
+    text-decoration: underline var(--title);
+}

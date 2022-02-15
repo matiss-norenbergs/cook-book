@@ -2,6 +2,11 @@
     padding: var(--padding);
 }
 
+.recipe .stateInfo{
+    font-size: 1.3rem;
+    color: var(--title);
+}
+
 .recipe .recipeInfo{
     background: var(--background2);
     padding: 40px;

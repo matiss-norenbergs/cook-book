@@ -70,4 +70,5 @@
 
 .recipe-list .recipe:hover .recipeBtn{
     background-color: #ccc;
+    color: #333;
 }

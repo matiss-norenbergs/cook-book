@@ -19,3 +19,11 @@
 .themes .themes-btn:hover{
     border: 2px solid red;
 }
+
+.themes .modes > .themes-btn{
+    margin-right: .8rem;
+}
+
+.themes .colors > .themes-btn{
+    margin-left: .8rem;
+}

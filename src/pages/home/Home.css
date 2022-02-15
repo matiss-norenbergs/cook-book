@@ -3,8 +3,7 @@
     padding: var(--padding);
 }
 
-.home .box{
-    background: var(--white);
-    padding: 15px;
-    width: 400px;
+.home .stateInfo{
+    font-size: 1.3rem;
+    color: var(--title);
 }
