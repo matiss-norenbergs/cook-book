@@ -1,0 +1,23 @@
+.searchBar{
+    display: flex;
+    align-items: center;
+}
+
+.searchBar label{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.searchBar input{
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.searchBar input:focus{
+    outline: none;
+    background: #bbb;
+}
