@@ -5,19 +5,20 @@
 .recipe .recipeInfo{
     background: #fff;
     padding: 40px;
+    font-weight: 500;
 }
 
 .recipe .recipeInfo h1{
     text-align: center;
     font-size: 2.1rem;
-    color: var(--textDark);
+    color: var(--title);
     margin-top: 2rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.8rem;
 }
 
 .recipe .recipeInfo .cookTime{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.6rem;
     color: var(--textDark);
 }
@@ -30,7 +31,7 @@
 
 .recipe .recipeInfo .cookMethod{
     margin-top: 1.5rem;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
     color: var(--textDark);
 }

@@ -4,12 +4,12 @@
 
 .create h1{
     font-size: 2.2rem;
-    color: #555;
+    color: var(--title);
     text-align: center;
 }
 
 .create .newRecipe{
-    padding: 3rem 0;
+    padding: 2rem 0 3rem 0;
     text-align: center;
     width: 600px;
     margin: 0 auto;
@@ -39,6 +39,10 @@
     font-size: 1.6rem;
     padding: 15px;
     color: var(--textDark);
+}
+
+.create .newRecipe .row input[type=text]:focus, input[type=number]:focus, textarea:focus{
+    outline-color: var(--purple);
 }
 
 .create .newRecipe .row span{
@@ -102,4 +106,12 @@
 
 .create .newRecipe input[type=submit]:hover, button:hover{
     background: #555;
+}
+
+.create .newRecipe .warning{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: red;
+    margin-bottom: 1.6rem;
 }
