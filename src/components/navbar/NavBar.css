@@ -1,7 +1,7 @@
 nav{
     display: flex;
     background: var(--purple);
-    color: var(--textWhite);
+    color: var(--white);
     height: 90px;
     width: 100%;
     padding: var(--padding);
@@ -11,7 +11,7 @@ nav{
 
 nav .logo{
     text-decoration: none;
-    color: var(--textWhite);
+    color: var(--white);
     font-size: 2.2rem;
     font-weight: 700;
 }
@@ -24,15 +24,15 @@ nav .section .createBtn{
     display: flex;
     align-items: center;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid var(--white);
     border-radius: 5px;
     margin-left: 30px;
     font-size: 1.3rem;
-    color: #fff;
+    color: var(--white);
     padding: 0 10px;
 }
 
 nav .section .createBtn:hover{
-    background: #fff;
+    background: var(--white);
     color: var(--purple);
 }

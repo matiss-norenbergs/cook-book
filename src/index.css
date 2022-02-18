@@ -10,10 +10,30 @@
 :root{
   --purple: #58249c;
   --title: #555;
-  --textWhite: #fff;
-  --textDark: #666;
+  --white: #fff;
+  --dark: #666;
+  --grey: #888;
   --background: #dfdfdf;
+  --background2: #fff;
   --padding: 60px 18%;
+}
+
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: #777;
+  border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+  background: #999;
+  border-radius: 6px;
 }
 
 body{

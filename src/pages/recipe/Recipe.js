@@ -9,8 +9,8 @@ const Recipe = () => {
 
     return(
         <div className="recipe">
-            { error && <div>{ error }</div> }
-            { isPending && <div>Loading...</div> }
+            { error && <div className='stateInfo'>{ error }</div> }
+            { isPending && <div className='stateInfo'>Loading...</div> }
             { recipe && (
                 <article className="recipeInfo">
                     <h1>{ recipe.title }</h1>

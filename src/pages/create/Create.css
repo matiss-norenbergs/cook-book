@@ -28,7 +28,7 @@
     font-size: 1.6rem;
     text-align: left;
     margin-bottom: .8rem;
-    color: var(--textDark);
+    color: var(--dark);
 }
 
 .create .newRecipe .row input[type=text], input[type=number], textarea{
@@ -38,7 +38,8 @@
     height: 50px;
     font-size: 1.6rem;
     padding: 15px;
-    color: var(--textDark);
+    color: #444;
+    background: var(--white);
 }
 
 .create .newRecipe .row input[type=text]:focus, input[type=number]:focus, textarea:focus{
@@ -51,12 +52,12 @@
     margin-top: .6rem;
     margin-bottom: 1.9rem;
     font-size: 1.3rem;
-    color: #888;
+    color: var(--grey);
 }
 
 .create .newRecipe .row span strong{
     display: inline-flex;
-    border: 2px solid #888;
+    border: 2px solid var(--grey);
     border-radius: 6px;
     padding: 4px 6px;
     margin-right: 6px;
@@ -82,7 +83,7 @@
 
 .create .newRecipe .row span strong button:hover{
     background: var(--purple);
-    color: var(--textWhite);
+    color: var(--white);
 }
 
 .create .newRecipe .row textarea{
@@ -98,7 +99,7 @@
     border: none;
     border-radius: 5px;
     background: var(--purple);
-    color: var(--textWhite);
+    color: var(--white);
     align-items: center;
     padding: 5px 25px;
     margin-left: 10px;
