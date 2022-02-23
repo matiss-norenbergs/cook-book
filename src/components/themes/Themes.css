@@ -27,3 +27,16 @@
 .themes .colors > .themes-btn{
     margin-left: .8rem;
 }
+
+.themes .colors .inputColor::-webkit-color-swatch-wrapper{
+    padding: 0;
+}
+
+.themes .colors .inputColor::-webkit-color-swatch{
+    border-radius: 50%;
+    border: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

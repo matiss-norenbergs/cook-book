@@ -1,12 +1,17 @@
+import { useEffect, useState, useRef } from 'react';
 import './Themes.css';
 
 const Themes = () => {
+    const [custom, setCustom] = useState('#000000');
+    const initialRender = useRef(true);
+    const setStyling = document.documentElement.style;
+
     const themes = {
         light: { bg: '#dfdfdf', bg2: '#fff', title: '#555', white: '#fff', dark: '#666', grey: '#888' },
         dark:  { bg: '#444', bg2: '#333', title: '#dfdfdf', white: '#ddd', dark: '#ddd', grey: '#bbb' }
     };
 
-    const setStyling = document.documentElement.style;
+    //----------------- Functions for setting themes --------------------------------
 
     const setMode = (mode, type) => {
         setStyling.setProperty('--background', mode.bg);
@@ -18,28 +23,36 @@ const Themes = () => {
 
         if(type){
             localStorage.setItem('mode', type);
-            console.log('Activated ' + type + ' mode!');
         }
     }
 
     const setColor = (code, color) => {
         setStyling.setProperty('--purple', code);
+        
         if(color){
             localStorage.setItem('color', color);
-            console.log('Activated ' + color + ' color!');
         }
     }
 
+    useEffect(() => {
+        if(initialRender.current){
+            initialRender.current = false;
+        }else{
+            setColor(custom, custom)
+        }
+    }, [custom]);
+
+    //----------------- Setting theme if the values have been specified --------------------------------
+
     const lightMode = localStorage.getItem('mode');
+    const color = localStorage.getItem('color');
 
     if(lightMode){
         lightMode === 'light' ? setMode(themes.light) : setMode(themes.dark)
     }
 
-    const color = localStorage.getItem('color');
-
     if(color){
-        color === 'purple' ? setColor('#58249c') : color === 'green' ? setColor('#283') : setColor('#811')
+        color === 'purple' ? setColor('#58249c') : color === 'green' ? setColor('#283') : color === 'red' ? setColor('#811') : setColor(color)
     }
 
     return(
@@ -52,6 +65,7 @@ const Themes = () => {
                 <button className='themes-btn' onClick={() => setColor('#58249c', 'purple')} style={{background: '#58249c'}}></button>
                 <button className='themes-btn' onClick={() => setColor('#283', 'green')} style={{background: '#283'}}></button>
                 <button className='themes-btn' onClick={() => setColor('#811', 'red')} style={{background: '#811'}}></button>
+                <input className='themes-btn inputColor' type="color" value={custom} onChange={(e) => setCustom(e.target.value)} />
             </div>
         </div>
     )
