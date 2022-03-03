@@ -17,7 +17,9 @@ const Create = () => {
 
     const recipesCollection = collection(db, "recipes");
     const createRecipe = async (cookingTime) => {
-        await addDoc(recipesCollection, { title, ingredients, method, cookingTime });
+        let timeStamp = new Date();
+        timeStamp = timeStamp.toLocaleString();
+        await addDoc(recipesCollection, { title, ingredients, method, cookingTime, timeStamp });
         navigate("/");
     }
 
