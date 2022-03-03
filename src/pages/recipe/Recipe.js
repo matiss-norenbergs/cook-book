@@ -4,8 +4,7 @@ import './Recipe.css';
 
 const Recipe = () => {
     const { id } = useParams();
-    const { data: recipe, error, isPending } = useFetch('http://localhost:3000/recipes/' + id);
-    
+    const { data: recipe, error, isPending } = useFetch("recipes", id);
 
     return(
         <div className="recipe">

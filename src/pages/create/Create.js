@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Create.css'
+import { addDoc, collection } from "firebase/firestore";
+import { db } from '../../firebase/firebase';
+import './Create.css';
 
 const Create = () => {
     const [title, setTitle] = useState('');
@@ -8,24 +10,24 @@ const Create = () => {
     const [ingredients, setIngredients] = useState([]);
     const [method, setMethod] = useState('');
     const [time, setTime] = useState('');
-    const navigate = useNavigate();
+    const [warning, setWarning] = useState('');
     let keyId = 0;
 
-    const [warning, setWarning] = useState('');
+    const navigate = useNavigate();
+
+    const recipesCollection = collection(db, "recipes");
+    const createRecipe = async (cookingTime) => {
+        await addDoc(recipesCollection, { title, ingredients, method, cookingTime });
+        navigate("/");
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if(title !== '' && ingredients.length !== 0 && method !== '' && time !== '' && !isNaN(time)){
             let cookingTime = time + " minutes"
-            const recipe = { title, ingredients, method, cookingTime };
+            //const recipe = { title, ingredients, method, cookingTime };
 
-            fetch('http://localhost:3000/recipes', {
-                method: 'POST',
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(recipe)
-            }).then(() => {
-                navigate("/");
-            })
+            createRecipe(cookingTime);
         }else{
             setWarning('Empty field! Don\'t forget to add an ingredient!');
         }

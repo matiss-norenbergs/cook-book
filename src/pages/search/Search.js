@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import './Search.css';
 
 const Search = () => {
-    const { data: recipes, isPending, error } = useFetch('http://localhost:3000/recipes');
+    const { data: recipes, isPending, error } = useFetch("recipes");
     const { search } = useLocation();
     const query = new URLSearchParams(search);
     const q = query.get('q');
