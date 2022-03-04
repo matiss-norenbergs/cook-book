@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDq8H7BpznkmQxYUnG7caAbvECjnq4zr48",
@@ -11,5 +12,24 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+
+const provider = new GoogleAuthProvider()
+
+export const signInWithGoogle = () => {
+  signInWithPopup(auth, provider)
+  .then((result) => {
+    const name = result.user.displayName;
+    const email = result.user.email;
+    const emailPic = result.user.photoURL;
+    const loggedUser = {name, email, emailPic};
+    
+    localStorage.setItem("loggedUser", JSON.stringify(loggedUser));
+
+    window.location.reload(false);
+  }).catch((error) => {
+    console.log(error);
+  });
+};
 
 export const db = getFirestore(app);
