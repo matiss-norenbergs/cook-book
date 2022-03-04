@@ -36,3 +36,25 @@ nav .section .createBtn:hover{
     background: var(--white);
     color: var(--purple);
 }
+
+nav .section .loginBtn{
+    margin-left: 30px;
+}
+
+nav .section .user{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: 15px;
+    background: none;
+    height: fit-content;
+}
+
+nav .section .user img{
+    height: 2.6rem;
+    border-radius: 50%;
+}
+
+nav .section .user img:hover{
+    border: 2px solid var(--white);
+}
