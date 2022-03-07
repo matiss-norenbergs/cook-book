@@ -15,7 +15,7 @@
   --grey: #888;
   --background: #dfdfdf;
   --background2: #fff;
-  --padding: 60px 18%;
+  --padding: 50px 18%;
 }
 
 html::-webkit-scrollbar{
@@ -38,4 +38,16 @@ html::-webkit-scrollbar-thumb:hover{
 
 body{
   background: var(--background);
+}
+
+@media (max-width: 1440px){
+  :root{
+    --padding: 30px 12%;
+  }
+}
+
+@media (max-width: 1000px){
+  :root{
+    --padding: 25px 5%;
+  }
 }
