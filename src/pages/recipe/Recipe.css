@@ -9,7 +9,7 @@
 
 .recipe .recipeInfo{
     background: var(--background2);
-    padding: 40px;
+    padding: 30px 40px;
     font-weight: 500;
 }
 
@@ -17,8 +17,8 @@
     text-align: center;
     font-size: 2.1rem;
     color: var(--title);
-    margin-top: 2rem;
-    margin-bottom: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.6rem;
 }
 
 .recipe .recipeInfo .cookTime{
@@ -39,4 +39,86 @@
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: var(--dark);
+    overflow: hidden;
+}
+
+.recipe .recipeInfo .madeBy{
+    margin-top: .8rem;
+    font-size: 1.4rem;
+    color: var(--grey);
+    text-align: right;
+}
+
+.recipe .recipeInfo .madeBy .author{
+    color: var(--title);
+    font-weight: 600;
+    color: var(--title);
+    text-decoration: underline 4px var(--purple);
+}
+
+.recipe .recipeInfo .btnHolder{
+    display: flex;
+    justify-content: right;
+    margin-top: 1rem;
+}
+
+.recipe .recipeInfo .deleteBtn{
+    font-size: 1.4rem;
+}
+
+@media (max-width: 1200px){
+    .recipe .stateInfo{
+        font-size: 1.3rem;
+    }
+
+    .recipe .recipeInfo{
+        padding: 35px;
+    }
+    
+    .recipe .recipeInfo h1{
+        font-size: 1.8rem;
+        margin-top: 1rem;
+        margin-bottom: .8rem;
+    }
+    
+    .recipe .recipeInfo .cookTime{
+        font-size: 1.3rem;
+    }
+    
+    .recipe .recipeInfo .cookMethod{
+        font-size: 1.3rem;
+        margin-top: 1.3rem;
+    }
+
+    .recipe .recipeInfo .madeBy{
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 500px){
+    .recipe .stateInfo{
+        font-size: 1.2rem;
+    }
+
+    .recipe .recipeInfo{
+        padding: 25px;
+    }
+    
+    .recipe .recipeInfo h1{
+        font-size: 1.6rem;
+        margin-top: 0;
+    }
+    
+    .recipe .recipeInfo .cookTime{
+        font-size: 1.2rem;
+    }
+    
+    .recipe .recipeInfo .cookMethod{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .recipe .recipeInfo .madeBy{
+        font-size: 1.1rem;
+    }
 }

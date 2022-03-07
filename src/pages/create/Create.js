@@ -11,6 +11,8 @@ const Create = () => {
     const [method, setMethod] = useState('');
     const [time, setTime] = useState('');
     const [warning, setWarning] = useState('');
+
+    const user = JSON.parse(localStorage.getItem("loggedUser"));
     let keyId = 0;
 
     const navigate = useNavigate();
@@ -19,13 +21,16 @@ const Create = () => {
     const createRecipe = async (cookingTime) => {
         let timeStamp = new Date();
         timeStamp = timeStamp.toLocaleString();
-        await addDoc(recipesCollection, { title, ingredients, method, cookingTime, timeStamp });
+
+        let madeBy = user.name;
+
+        await addDoc(recipesCollection, { title, ingredients, method, cookingTime, timeStamp, madeBy });
         navigate("/");
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(title !== '' && ingredients.length !== 0 && method !== '' && time !== '' && !isNaN(time)){
+        if(title !== '' && ingredients.length !== 0 && method !== '' && time !== '' && !isNaN(time) && user){
             let cookingTime = time + " minutes"
             //const recipe = { title, ingredients, method, cookingTime };
 

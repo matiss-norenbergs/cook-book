@@ -22,3 +22,26 @@
     outline: none;
     background: #bbb;
 }
+
+@media (max-width: 1200px){
+    .searchBar label{
+        font-size: 1.3rem;
+    }
+
+    .searchBar input{
+        height: 40px;
+        width: 200px;
+        padding: 5px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 840px){
+    .searchBar label{
+        display: none;
+    }
+
+    .searchBar input{
+        display: none;
+    }    
+}

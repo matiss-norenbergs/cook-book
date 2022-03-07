@@ -42,7 +42,6 @@
 .recipe-list .recipe p{
     color: var(--dark);
     margin-top: 17px;
-    margin-bottom: 1.5rem;
     font-size: 1.1rem;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -51,12 +50,24 @@
     -webkit-box-orient: vertical;
 }
 
-.recipe-list .recipe div{
+.recipe-list .recipe .madeBy{
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.recipe-list .recipe .madeBy .author{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--title);
+    text-decoration: underline 4px var(--purple);
+}
+
+.recipe-list .recipe .btnHolder{
     display: flex;
     justify-content: center;
 }
 
-.recipe-list .recipe div .recipeBtn{
+.recipe-list .recipe .btnHolder .recipeBtn{
     display: flex;
     text-decoration: none;
     background: var(--background);
@@ -64,6 +75,7 @@
     border: none;
     border-radius: 5px;
     font-size: 1.4rem;
+    margin-top: 1.5rem;
     padding: 6px 20px;
     cursor: pointer;
 }
@@ -71,4 +83,42 @@
 .recipe-list .recipe:hover .recipeBtn{
     background-color: #ccc;
     color: #333;
+}
+
+@media (max-width: 1200px){
+    .recipe-list{
+        grid-gap: 20px;
+        grid-template-columns: 50% 50%;
+    }
+
+    .recipe-list .recipe{
+        padding: 15px;
+    }
+
+    .recipe-list .recipe h2{
+        font-size: 1.5rem;
+    }
+    
+    .recipe-list .recipe span{
+        font-size: 1.2rem;
+    }
+    
+    .recipe-list .recipe p{
+        font-size: 1rem;
+    }
+    
+    .recipe-list .recipe .madeBy{
+        font-size: 1rem;
+    }
+    
+    .recipe-list .recipe .madeBy .author{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px){
+    .recipe-list{
+        grid-gap: 20px;
+        grid-template-columns: 100%;
+    }
 }

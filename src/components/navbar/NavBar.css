@@ -37,6 +37,10 @@ nav .section .createBtn:hover{
     color: var(--purple);
 }
 
+nav .section .phoneIcon{
+    display: none;
+}
+
 nav .section .loginBtn{
     margin-left: 30px;
 }
@@ -57,4 +61,29 @@ nav .section .user img{
 
 nav .section .user img:hover{
     border: 2px solid var(--white);
+}
+
+@media (max-width: 1200px){
+    nav .logo{
+        font-size: 2rem;
+    }
+
+    nav .section .createBtn{
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 840px){
+    nav .logo{
+        font-size: 1.7rem;
+    }
+
+    nav .section .createBtn{
+        display: none;
+        margin-left: 10px;
+    }
+
+    nav .section .phoneIcon{
+        display: flex;
+    }
 }

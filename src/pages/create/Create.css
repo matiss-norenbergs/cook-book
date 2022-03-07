@@ -116,3 +116,52 @@
     color: red;
     margin-bottom: 1.6rem;
 }
+
+@media (max-width: 1200px){
+    .create h1{
+        font-size: 2rem;
+    }
+
+    .create .newRecipe .row label{
+        font-size: 1.4rem;
+    }
+    
+    .create .newRecipe .row input[type=text], input[type=number], textarea{
+        font-size: 1.4rem;
+    }
+    
+    .create .newRecipe .row span{
+        font-size: 1.2rem;
+    }
+
+    .create .newRecipe .row span strong button{
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 680px){
+    .create h1{
+        font-size: 1.7rem;
+    }
+
+    .create .newRecipe{
+        width: auto;
+        padding: 1rem 0 1.5rem 0;
+    }
+
+    .create .newRecipe .row{
+        margin-bottom: 1.1rem;
+    }
+
+    .create .newRecipe .row input[type=text], input[type=number], textarea{
+        font-size: 1.3rem;
+    }
+    
+    .create .newRecipe .row span{
+        font-size: 1.1rem;
+    }
+
+    .create .newRecipe .row span strong button{
+        font-size: 1.2rem;
+    }
+}
