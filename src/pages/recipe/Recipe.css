@@ -43,7 +43,7 @@
 }
 
 .recipe .recipeInfo .madeBy{
-    margin-top: .8rem;
+    margin-top: 3rem;
     font-size: 1.4rem;
     color: var(--grey);
     text-align: right;
@@ -54,6 +54,7 @@
     font-weight: 600;
     color: var(--title);
     text-decoration: underline 4px var(--purple);
+    text-underline-offset: 4px;
 }
 
 .recipe .recipeInfo .btnHolder{
@@ -63,7 +64,25 @@
 }
 
 .recipe .recipeInfo .deleteBtn{
+    margin-top: .2rem;
     font-size: 1.4rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background: var(--purple);
+    color: var(--white);
+    align-items: center;
+    padding: 10px 25px;
+}
+
+.recipe .recipeInfo .deleteBtn:hover{
+    background: #555;
+}
+
+@media (max-width: 1200px){
+    .recipe .recipeInfo .madeBy{
+        margin-top: 1.8rem;
+    }
 }
 
 @media (max-width: 1200px){

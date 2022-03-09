@@ -42,25 +42,84 @@ nav .section .phoneIcon{
 }
 
 nav .section .loginBtn{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
     margin-left: 30px;
+    font-size: 1.3rem;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
 }
 
-nav .section .user{
+nav .section .loginBtn:hover{
+    background: var(--white);
+    color: var(--purple);
+}
+
+nav .section .dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+nav .section .userBtn{
     display: flex;
     align-items: center;
     padding: 0;
     margin-left: 15px;
     background: none;
     height: fit-content;
+    border: none;
 }
 
-nav .section .user img{
+nav .section .userBtn img{
     height: 2.6rem;
     border-radius: 50%;
 }
 
-nav .section .user img:hover{
+nav .section .userBtn img:hover{
     border: 2px solid var(--white);
+}
+
+nav .section .dropdown-content{
+    position: absolute;
+    width: auto;
+    background: var(--background);
+    text-align: right;
+    color: var(--dark);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-radius: 1.2rem 0 1.2rem 1.2rem;
+    border: 1px solid #888;
+
+    z-index: 1;
+    top: 1.8rem;
+    right: 1.8rem;
+}
+
+nav .section .dropdown-content > hr{
+    margin: .4rem 0;
+    border: 2px solid #888;
+    border-radius: 10px 0 10px 0;
+}
+
+nav .section .dropdown-content > .logoutBtn{
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .6rem 1.5rem;
+    margin-top: .5rem;
+    border-radius: 5px;
+    background: var(--purple);
+    color: var(--white);
+}
+
+nav .section .dropdown-content > .logoutBtn:hover{
+    background: var(--white);
+    color: var(--purple);
 }
 
 @media (max-width: 1200px){
@@ -70,6 +129,7 @@ nav .section .user img:hover{
 
     nav .section .createBtn{
         font-size: 1.1rem;
+        height: 2.6rem;
     }
 }
 
@@ -85,5 +145,19 @@ nav .section .user img:hover{
 
     nav .section .phoneIcon{
         display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.6rem;
+        width: 2.6rem;
+    }
+
+    nav .section .loginBtn{
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 500px){
+    nav .section .loginBtn{
+        font-size: 1.2rem;
     }
 }

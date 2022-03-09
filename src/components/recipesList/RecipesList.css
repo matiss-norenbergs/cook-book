@@ -1,7 +1,7 @@
 .recipe-list{
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: 31% 31% 31%;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 }
 
 .recipe-list a{
@@ -20,11 +20,11 @@
 
 @keyframes rotate{
     0% {transform: rotate(0deg);}
-    100% {transform: rotate(5deg);}
+    100% {transform: rotate(4deg);}
 }
 
 @keyframes rotateBack{
-    0% {transform: rotate(5deg);}
+    0% {transform: rotate(4deg);}
     100% {transform: rotate(0deg);}
 }
 
@@ -76,7 +76,7 @@
     border-radius: 5px;
     font-size: 1.4rem;
     margin-top: 1.5rem;
-    padding: 6px 20px;
+    padding: 10px 20px;
     cursor: pointer;
 }
 
@@ -85,10 +85,16 @@
     color: #333;
 }
 
+@media (max-width: 1500px){
+    .recipe-list{
+        grid-template-columns: repeat(auto-fill, minmax(17.3rem, 1fr));
+    }
+}
+
 @media (max-width: 1200px){
     .recipe-list{
-        grid-gap: 20px;
-        grid-template-columns: 50% 50%;
+        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(17.4rem, 1fr));
     }
 
     .recipe-list .recipe{
@@ -114,11 +120,14 @@
     .recipe-list .recipe .madeBy .author{
         font-size: 1rem;
     }
+
+    .recipe-list .recipe .btnHolder .recipeBtn{
+        margin-top: 1.3rem;
+    }
 }
 
 @media (max-width: 500px){
     .recipe-list{
         grid-gap: 20px;
-        grid-template-columns: 100%;
     }
 }

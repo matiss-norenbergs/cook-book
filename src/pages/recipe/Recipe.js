@@ -1,16 +1,17 @@
-import { useNavigate, useParams } from "react-router-dom";
+import './Recipe.css';
 import useFetch from '../../hooks/useFetch';
+import { useNavigate, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { db } from "../../firebase/firebase";
 import { deleteDoc, doc } from "firebase/firestore";
-import './Recipe.css';
+import { useSelector } from 'react-redux';
 
 const Recipe = () => {
     const { id } = useParams();
-    const { data: recipe, error, isPending } = useFetch("recipes", id);
-    const user = JSON.parse(localStorage.getItem("loggedUser"));
     const navigate = useNavigate();
+    const { data: recipe, error, isPending } = useFetch("recipes", id);
+    const user = useSelector(state => state.user.user);
 
     const deleteRecipe = async () => {
         await deleteDoc(doc(db, "recipes", id));
@@ -40,10 +41,9 @@ const Recipe = () => {
                     </p>
 
                     <p className="cookMethod">{ recipe.method }</p>
+                    <p className="madeBy">Added by <span className="author">{ recipe.authorName }</span></p>
 
-                    <p className="madeBy">Added by <span className="author">{ recipe.madeBy }</span></p>
-
-                    { user && recipe.madeBy === user.name ? isAuthor() : '' }
+                    { user && recipe.authorID === user.id ? isAuthor() : '' }
                 </article>
             )}
         </div>
