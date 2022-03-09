@@ -12,7 +12,7 @@ const RecipeList = (props) => {
                         <h2>{ recipe.title }</h2>
                         <span>{ recipe.cookingTime } to make.</span>
                         <p>{ recipe.method }</p>
-                        <p className='madeBy'>By <span className='author'>{ recipe.madeBy }</span></p>
+                        <p className='madeBy'>By <span className='author'>{ recipe.authorName }</span></p>
                         <div className='btnHolder'>
                             <button className='recipeBtn'>Cook this</button>
                         </div>

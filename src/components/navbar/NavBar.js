@@ -1,37 +1,82 @@
 import './NavBar.css';
-import { Link } from 'react-router-dom';
 import SearchBar from '../searchBar/SearchBar';
-import { signInWithGoogle } from '../../firebase/firebase';
-import GoogleButton from 'react-google-button';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { signInWithGoogle } from '../../firebase/firebase';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../redux/userSlice';
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
-    const user = JSON.parse(localStorage.getItem("loggedUser"));
-    let isLogged = false;
+    const auth = getAuth();
+    const dispatch = useDispatch();
+    const user = useSelector(state => state.user.user);
 
-    if(user){
-        isLogged = true;
-    };
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if(user){
+                const name = user.displayName;
+                const email = user.email;
+                const picture = user.photoURL;
+                const id = user.uid;
+                const userInfo = { name, email, picture, id };
+                dispatch(setUser(userInfo));
+            }
+        });
+        
+        return unsubscribe;
+    }, []);
 
     const logOut = () => {
-        localStorage.removeItem("loggedUser");
-        window.location.reload(false);
+        signOut(auth).then(() => {
+            window.location.reload(false);
+        }).catch((error) => {
+            console.log(error);
+        });
     };
+
+    const [dropdown, setDropdown] = useState('none');
+
+    const showDropdown = () => {
+        if(dropdown === 'none'){
+            setDropdown('block');
+        }else{
+            setDropdown('none'); 
+        }
+    };
+
+    window.onclick = function(event){
+        if (!event.target.matches('.userPicture')){
+            if(dropdown === 'block'){
+                setDropdown('none');
+            }
+        }
+    }
 
     const create = () => {
         return (
             <>
                 <Link className='createBtn' to='/create'>create recipe</Link>
                 <Link className='createBtn phoneIcon' to='/create'><FontAwesomeIcon icon={faPlus} /></Link>
-                <button className='user' onClick={logOut}><img src={user.emailPic} alt='' /></button>
+                <div className='dropdown'>
+                    <button className='userBtn' onClick={showDropdown}><img className='userPicture' src={user.picture} alt="" /></button>
+                    <div className='dropdown-content' id='userDropdown' style={{display: dropdown}}>
+                        { user.name }<hr />
+                        { user.email }<hr />
+                        <button className='logoutBtn' onClick={logOut}>Log out</button>
+                    </div>
+                </div>
             </>
         )
     };
 
     const login = () => {
         return (
-            <GoogleButton className='loginBtn' onClick={signInWithGoogle} />
+            <button className='loginBtn' onClick={signInWithGoogle}><FontAwesomeIcon icon={faGoogle} /> &nbsp; Sign in </button>
         )
     };
 
@@ -42,7 +87,7 @@ const NavBar = () => {
             <div className='section'>
                 <SearchBar />
                 <Link className='createBtn phoneIcon' to='/'><FontAwesomeIcon icon={faMagnifyingGlass} /></Link>
-                { isLogged ? create() : login() }
+                { user ? create() : login() }
             </div>
         </nav>
     )

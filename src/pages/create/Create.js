@@ -1,8 +1,9 @@
+import './Create.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { addDoc, collection } from "firebase/firestore";
 import { db } from '../../firebase/firebase';
-import './Create.css';
+import { useSelector } from 'react-redux';
 
 const Create = () => {
     const [title, setTitle] = useState('');
@@ -11,8 +12,7 @@ const Create = () => {
     const [method, setMethod] = useState('');
     const [time, setTime] = useState('');
     const [warning, setWarning] = useState('');
-
-    const user = JSON.parse(localStorage.getItem("loggedUser"));
+    const user = useSelector(state => state.user.user);
     let keyId = 0;
 
     const navigate = useNavigate();
@@ -20,20 +20,19 @@ const Create = () => {
     const recipesCollection = collection(db, "recipes");
     const createRecipe = async (cookingTime) => {
         let timeStamp = new Date();
-        timeStamp = timeStamp.toLocaleString();
+        timeStamp = timeStamp.toLocaleString('en-IE');
 
-        let madeBy = user.name;
+        const authorName = user.name;
+        const authorID = user.id;
 
-        await addDoc(recipesCollection, { title, ingredients, method, cookingTime, timeStamp, madeBy });
+        await addDoc(recipesCollection, { title, ingredients, method, cookingTime, timeStamp, authorName, authorID });
         navigate("/");
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if(title !== '' && ingredients.length !== 0 && method !== '' && time !== '' && !isNaN(time) && user){
-            let cookingTime = time + " minutes"
-            //const recipe = { title, ingredients, method, cookingTime };
-
+            let cookingTime = time + " minutes";
             createRecipe(cookingTime);
         }else{
             setWarning('Empty field! Don\'t forget to add an ingredient!');
@@ -66,14 +65,14 @@ const Create = () => {
                     <label>Recipe ingredients:</label>
                     <div className="inline">
                         <input type="text" value={ingredient} onChange={(e) => setIngredient(e.target.value)} />
-                        <button onClick={handleAdd}>add</button>
+                        <button className='addItem' onClick={handleAdd}>add</button>
                     </div>
                     <span>
                         Current ingredients:&nbsp;
                         {ingredients.map(e =>
                             <strong key={keyId++}> 
                                 {e}
-                                <button name={e} onClick={removeIngredient}>×</button> 
+                                <button className='removeItem' name={e} onClick={removeIngredient}>×</button> 
                             </strong>
                         )}
                     </span>
