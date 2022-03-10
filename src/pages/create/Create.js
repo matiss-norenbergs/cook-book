@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { addDoc, collection } from "firebase/firestore";
 import { db } from '../../firebase/firebase';
 import { useSelector } from 'react-redux';
+import dateFormat from 'dateformat';
 
 const Create = () => {
     const [title, setTitle] = useState('');
@@ -20,7 +21,7 @@ const Create = () => {
     const recipesCollection = collection(db, "recipes");
     const createRecipe = async (cookingTime) => {
         let timeStamp = new Date();
-        timeStamp = timeStamp.toLocaleString('en-IE');
+        timeStamp = dateFormat(timeStamp, "dd/mm/yyyy, HH:MM:ss");
 
         const authorName = user.name;
         const authorID = user.id;

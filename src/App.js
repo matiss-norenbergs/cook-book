@@ -6,6 +6,7 @@ import Recipe from "./pages/recipe/Recipe";
 import Search from "./pages/search/Search";
 import Themes from "./components/themes/Themes";
 import NotFound from "./components/notFound/NotFound";
+import ProctectedRoutes from './pages/ProtectedRoutes';
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/create' element={<Create />} />
+          <Route element={<ProctectedRoutes />}>
+            <Route path='/create' element={<Create />} />
+          </Route>
           <Route path='/search' element={<Search />} />
           <Route path='/recipe/:id' element={<Recipe />} />
           <Route path='*' element={<NotFound />} />

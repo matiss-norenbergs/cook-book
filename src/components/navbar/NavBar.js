@@ -2,7 +2,7 @@ import './NavBar.css';
 import SearchBar from '../searchBar/SearchBar';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faPlus, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { signInWithGoogle } from '../../firebase/firebase';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
@@ -67,7 +67,7 @@ const NavBar = () => {
                     <div className='dropdown-content' id='userDropdown' style={{display: dropdown}}>
                         { user.name }<hr />
                         { user.email }<hr />
-                        <button className='logoutBtn' onClick={logOut}>Log out</button>
+                        <button className='logoutBtn' onClick={logOut}><FontAwesomeIcon icon={faRightFromBracket} /> Log out</button>
                     </div>
                 </div>
             </>
