@@ -35,13 +35,3 @@
         font-size: 1.3rem;
     }
 }
-
-@media (max-width: 840px){
-    .searchBar label{
-        display: none;
-    }
-
-    .searchBar input{
-        display: none;
-    }    
-}
