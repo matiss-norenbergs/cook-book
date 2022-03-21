@@ -2,7 +2,7 @@ import './NavBar.css';
 import SearchBar from '../searchBar/SearchBar';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faPlus, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faPlus, faRightFromBracket, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { signInWithGoogle } from '../../firebase/firebase';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
@@ -40,6 +40,7 @@ const NavBar = () => {
     };
 
     const [dropdown, setDropdown] = useState('none');
+    const [searchMobile, setSearchMobile] = useState('none');
 
     const showDropdown = () => {
         if(dropdown === 'none'){
@@ -49,13 +50,21 @@ const NavBar = () => {
         }
     };
 
-    window.onclick = function(event){
+    const mobileSearch = () => {
+        if(searchMobile === 'none'){
+            setSearchMobile('flex');
+        }else{
+            setSearchMobile('none');
+        }
+    }
+
+    window.addEventListener("click", function(event){
         if (!event.target.matches('.userPicture')){
             if(dropdown === 'block'){
                 setDropdown('none');
             }
         }
-    }
+    });
 
     const create = () => {
         return (
@@ -86,8 +95,15 @@ const NavBar = () => {
 
             <div className='section'>
                 <SearchBar />
-                <Link className='createBtn phoneIcon' to='/'><FontAwesomeIcon icon={faMagnifyingGlass} /></Link>
+                <button className='createBtn phoneIcon' onClick={mobileSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
                 { user ? create() : login() }
+            </div>
+
+            <div className='mobileSearch' style={{display: searchMobile}}>
+                <button className='close' onClick={mobileSearch}><FontAwesomeIcon icon={faTimes} /></button>
+                <div className='srcBar'>
+                    <SearchBar />
+                </div>
             </div>
         </nav>
     )

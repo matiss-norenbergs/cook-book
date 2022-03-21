@@ -2,7 +2,8 @@ import { useEffect, useState, useRef } from 'react';
 import './Themes.css';
 
 const Themes = () => {
-    const [custom, setCustom] = useState('#000000');
+    const currentColor = localStorage.getItem('color');
+    const [custom, setCustom] = useState(currentColor ? currentColor : '#242424');
     const initialRender = useRef(true);
     const setStyling = document.documentElement.style;
 
@@ -30,7 +31,8 @@ const Themes = () => {
         setStyling.setProperty('--purple', code);
         
         if(color){
-            localStorage.setItem('color', color);
+            setCustom(code);
+            localStorage.setItem('color', code);
         }
     }
 
@@ -43,16 +45,16 @@ const Themes = () => {
     }, [custom]);
 
     //----------------- Setting theme if the values have been specified --------------------------------
-
-    const lightMode = localStorage.getItem('mode');
     const color = localStorage.getItem('color');
+    const lightMode = localStorage.getItem('mode');
+    
 
     if(lightMode){
         lightMode === 'light' ? setMode(themes.light) : setMode(themes.dark)
     }
 
     if(color){
-        color === 'purple' ? setColor('#58249c') : color === 'green' ? setColor('#283') : color === 'red' ? setColor('#811') : setColor(color)
+        color === '#58249c' ? setColor(color) : color === '#228833' ? setColor(color) : color === '#881111' ? setColor(color) : setColor(color)
     }
 
     return(
@@ -63,8 +65,8 @@ const Themes = () => {
             </div>
             <div className="colors">
                 <button className='themes-btn' onClick={() => setColor('#58249c', 'purple')} style={{background: '#58249c'}}></button>
-                <button className='themes-btn' onClick={() => setColor('#283', 'green')} style={{background: '#283'}}></button>
-                <button className='themes-btn' onClick={() => setColor('#811', 'red')} style={{background: '#811'}}></button>
+                <button className='themes-btn' onClick={() => setColor('#228833', 'green')} style={{background: '#228833'}}></button>
+                <button className='themes-btn' onClick={() => setColor('#881111', 'red')} style={{background: '#881111'}}></button>
                 <input className='themes-btn inputColor' type="color" value={custom} onChange={(e) => setCustom(e.target.value)} />
             </div>
         </div>
