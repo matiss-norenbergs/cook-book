@@ -9,7 +9,7 @@ const Themes = () => {
 
     const themes = {
         light: { bg: '#dfdfdf', bg2: '#fff', title: '#555', white: '#fff', dark: '#666', grey: '#888' },
-        dark:  { bg: '#444', bg2: '#333', title: '#dfdfdf', white: '#ddd', dark: '#ddd', grey: '#bbb' }
+        dark:  { bg: '#222', bg2: '#333', title: '#dfdfdf', white: '#ccc', dark: '#ddd', grey: '#bbb' }
     };
 
     //----------------- Functions for setting themes --------------------------------
