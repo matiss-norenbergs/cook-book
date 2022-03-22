@@ -147,8 +147,15 @@ nav .mobileSearch{
     left: 0;
     right: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.712);
+    background: rgba(0, 0, 0, 0.8);
     border-bottom: 2px solid var(--purple);
+
+    animation: mobileSearch .2s ease-in both;
+}
+
+@keyframes mobileSearch{
+    from{transform: translateY(-100%);}
+    to{transform: translate(0%);}
 }
 
 nav .mobileSearch > .close{
