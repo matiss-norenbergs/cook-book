@@ -147,7 +147,7 @@ nav .mobileSearch{
     left: 0;
     right: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     border-bottom: 2px solid var(--purple);
 
     animation: mobileSearch .2s ease-in both;
@@ -169,9 +169,11 @@ nav .mobileSearch > .close{
     width: 3.5rem;
     line-height: 3.5rem;
     font-size: 1.6rem;
+
+    transition: .5s;
 }
 
-nav .mobileSearch > .close:hover{
+nav .mobileSearch > .close:hover, .close:focus{
     background: #fff;
     border: 2px solid var(--purple);
 }
