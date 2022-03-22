@@ -27,7 +27,7 @@ const SearchBar = () => {
     return(
         <form className='searchBar' onSubmit={submit}>
             <label>Search: </label>
-            <input type="text" value={searchVal} onChange={(e) => setSearchVal(e.target.value)} />
+            <input type="text" value={searchVal} onChange={(e) => setSearchVal(e.target.value.toLowerCase())} />
         </form>
     )
 }
