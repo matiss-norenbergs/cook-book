@@ -1,12 +1,5 @@
 .recipe{
     padding: var(--padding);
-
-    animation: recipeCardShow .3s ease-in;
-}
-
-@keyframes recipeCardShow{
-    from{transform: translateX(-120%);}
-    to{transform: translateX(0%);}
 }
 
 .recipe .stateInfo{
@@ -18,6 +11,13 @@
     background: var(--background2);
     padding: 30px 40px;
     font-weight: 500;
+
+    animation: recipeCardShow .3s ease-in;
+}
+
+@keyframes recipeCardShow{
+    from{transform: translateX(-120%);}
+    to{transform: translateX(0%);}
 }
 
 .recipe .recipeInfo h1{
