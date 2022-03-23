@@ -2,14 +2,32 @@
     padding: var(--padding);
 }
 
-.search h1{
+.search > h1{
     font-size: 2.2rem;
     color: var(--title);
     text-align: center;
     margin-bottom: 2.5rem;
 }
 
+.search > h1 span{
+    font-style: italic;
+}
+
 .search .stateInfo{
     font-size: 1.3rem;
     color: var(--title);
+}
+
+@media(max-width: 1200px){
+    .search > h1{
+        font-size: 2rem;
+        margin-bottom: 2.2rem;
+    }
+}
+
+@media(max-width: 500px){
+    .search > h1{
+        font-size: 1.6rem;
+        margin-bottom: 1.8rem;
+    }
 }

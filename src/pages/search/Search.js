@@ -15,7 +15,7 @@ const Search = () => {
 
     return(
         <div className="search">
-            <h1>Recipes including {q !== '' ? q : '...'}</h1>
+            <h1>Recipes including: <span>{q !== '' ? q : '...'}</span></h1>
             { error && <div className='stateInfo'>{ error }</div> }
             { isPending && <div className='stateInfo'>Searching...</div> }
             { recipes && <RecipeList recipes={searchFilter(recipes)} /> }

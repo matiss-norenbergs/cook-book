@@ -7,3 +7,9 @@
     font-size: 1.3rem;
     color: var(--title);
 }
+
+@media (max-width: 500px){
+    .home{
+        padding-top: 1rem;
+    }
+}

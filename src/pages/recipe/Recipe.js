@@ -69,7 +69,7 @@ const Recipe = () => {
 
     return(
         <div className="recipe">
-            { showRecipeCard === true ? showRecipe() : deletedRecipe() }
+            { showRecipeCard ? showRecipe() : deletedRecipe() }
         </div>
     );
 }
